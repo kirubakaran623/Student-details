@@ -1,0 +1,55 @@
+    {% extends "base.html"%}
+    {%block title%}
+    STUDENT DETAILS
+    {%endblock%}
+
+    {%block content%}
+    <style>
+        table{
+            border: 1;
+            border-collapse: collapse;
+        }
+        tr td{
+            padding: 1rem;
+            text-align: center;
+            background-color: rgb(168, 182, 190);
+        }
+        th{
+            padding: 1rem;
+            background-color: rgb(4, 61, 99);
+            color: white;
+        }
+        td a{
+            text-decoration: none;
+            background-color: rgb(4, 61, 99);
+            padding:1rem;
+            color:rgb(255, 255, 255);
+        }
+    </style>
+    <center>
+        <h1>~~ STUDENT DETAILS ~~</h1>
+    <table border="1">
+        <tr>
+            <th>Serial no</th>
+            <th>Name</th>
+            <th>Age</th>
+            <th>Roll_NO</th>
+            <th colspan="5">Marks</th>
+            <th colspan="2">Action</th>
+        </tr>
+        {%for details in data%}
+        <tr>
+            <td>{{loop.index}}</td>
+            <td>{{details.Name}}</td>
+            <td>{{details.Age}}</td>
+            <td>{{details.Roll_NO}}</td>
+            {%for mark in details.Marks%}
+            <td>{{mark}}</td>
+            {%endfor%}
+            <td><a href="{{url_for('edit',id=loop.index)}}">Edit</a></td>
+            <td><a href="{{url_for('delete',id=loop.index)}}">Delete</a></td>
+        </tr>
+        {%endfor%}
+    </table>
+    </center>
+    {%endblock content%}

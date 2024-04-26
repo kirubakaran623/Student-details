@@ -1,0 +1,67 @@
+    {% extends "base.html"%}
+    {%block title%}
+     ADD STUDENT DETAILS
+    {%endblock%}
+
+    {%block content%}
+    <style>
+        form{
+          background-color: rgb(4, 61, 99);
+          height: 50%;
+          width: 50%;
+          color: white;
+          font-size: 15px;
+          border-radius: 1rem;
+        }
+    </style>
+    <center>
+        
+    <form method="post">
+        <h1>ADD STUDENT DETAIL</h1>
+        <table>
+            <tr>
+                <td><label for="Name">Name : </label></td>
+                <td><input type="text" name="Name" ></td>
+            </tr>
+            <br>
+            <tr>
+                <td><label for="Age">Age : </label></td>
+                <td><input type="number" name="Age" ></td>
+            </tr>
+            <br>
+            <tr>
+                <td><label for="Roll_NO">Roll NO : </label></td>
+                <td><input type="text" name="Roll_NO" ></td>
+            </tr>
+            <br>
+            <tr>
+                <td><label for="tamil">Tamil : </label></td>
+                <td><input type="number" name="tamil" ></td>
+            </tr>
+            <tr>
+                <td><label for="english">English : </label></td>
+                <td><input type="number" name="english" ></td>
+            </tr>
+            <br>
+            <tr>
+                <td><label for="math">Math : </label></td>
+                <td><input type="number" name="math"></td>
+            </tr>
+            <br>
+            <tr>
+                <td><label for="science">Science : </label></td>
+                <td><input type="number" name="science"></td>
+            </tr>
+            <br>
+            <tr>
+                <td><label for="social">Social : </label></td>
+                <td><input type="number" name="social"></td>
+            </tr>
+            <br>
+            <tr>
+                <td><input type="Submit" value="Submit"></td>
+            </tr>
+        </table>
+    </form>
+    </center>
+    {%endblock content%}

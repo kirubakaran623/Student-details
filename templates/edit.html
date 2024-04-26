@@ -1,0 +1,70 @@
+
+    {% extends "base.html" %}
+    {%block title%}
+    Edit student details
+    {%endblock%}
+
+    {%block content%}
+    <style>
+        form{
+            background-color: rgb(4, 61, 99);
+            height: 50%;
+            width: 50%;
+            color: white;
+            font-size: 15px;
+            border-radius: 1rem;
+          }
+    </style>
+    <center>
+        
+    <div>
+    <form method="post">
+        <h1>EDIT STUDENT DETAIL</h1>
+            <table>
+                <tr>
+                    <td><label for="Name">Name : </label></td>
+                    <td><input type="text" name="Name" value="{{form_data.Name}}"></td>
+                </tr>
+                <br>
+                <tr>
+                    <td><label for="Age">Age : </label></td>
+                    <td><input type="number" name="Age" value="{{form_data.Age}}"></td>
+                </tr>
+                <br>
+                <tr>
+                    <td><label for="Roll_NO">Roll NO : </label></td>
+                    <td><input type="text" name="Roll_NO" value="{{form_data.Roll_NO}}"></td>
+                </tr>
+                <br>
+                <tr>
+                    <td><label for="tamil">Tamil : </label></td>
+                    <td><input type="number" name="tamil" value="{{form_data.Marks[0]}}"></td>
+                </tr>
+                <tr>
+                    <td><label for="english">English : </label></td>
+                    <td><input type="number" name="english" value="{{form_data.Marks[1]}}"></td>
+                </tr>
+                <br>
+                <tr>
+                    <td><label for="math">Math : </label></td>
+                    <td><input type="number" name="math" value="{{form_data.Marks[2]}}"></td>
+                </tr>
+                <br>
+                <tr>
+                    <td><label for="science">Science : </label></td>
+                    <td><input type="number" name="science" value="{{form_data.Marks[3]}}"></td>
+                </tr>
+                <br>
+                <tr>
+                    <td><label for="social">Social : </label></td>
+                    <td><input type="number" name="social" value="{{form_data.Marks[4]}}"></td>
+                </tr>
+                <br>
+                <tr>
+                    <td><input type="Submit" value="Submit"></td>
+                </tr>
+            </table>
+    </form>
+    </div>
+    </center>
+    {%endblock content%}
